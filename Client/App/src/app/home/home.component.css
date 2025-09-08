@@ -1,0 +1,105 @@
+.mainheading {
+    color: #393a3a;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btnn{
+    background-color: #404270;
+    color: white;
+} 
+
+.addhover:hover {
+    background-color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.list-group-item:hover {
+    background-color: #404270;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.active-item {
+  background-color: #404270 !important; 
+  color: white !important;
+  font-weight: bold;
+}
+
+.list-group-item {
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Stagger effect (delay per item) */
+.list-group-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.list-group-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.list-group-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.list-group-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.list-group-item:nth-child(5) {
+  animation-delay: 1s;
+}
+/* …continue if you expect more items */
+
+@media (max-width: 767.98px) {  /* below md */
+  .sidebar-custom {
+    height: auto !important;
+  }
+}
+
+/* .taskheading{
+    background-color: rgb(168, 76, 154);
+    color: white;
+} */
+
+.task-card {
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.task-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.task-actions button {
+  font-size: 0.85rem;
+}
+
+.task-card.task-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.5s forwards;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger for multiple tasks */
+.task-card.task-animate:nth-child(1) { animation-delay: 0s; }
+.task-card.task-animate:nth-child(2) { animation-delay: 0.1s; }
+.task-card.task-animate:nth-child(3) { animation-delay: 0.2s; }
+/* add more as needed */
